@@ -1,6 +1,5 @@
 import Head from "next/head"
 import { useRouter } from "next/router"
-import { env } from "process"
 import HeaderFooterLayout from "@/layouts/HeaderFooter.layout"
 import ContentFullLayout from "@/layouts/ContentFull.layout"
 import NextPageWithLayout from "@/types/Layout.types"
@@ -12,6 +11,7 @@ import Spotify from "@/components/Spotify"
 import BannerWrapper from "@/components/BannerWrapper"
 import BannerPortalverse from "@/components/BannerPortalverse"
 import { fetchStrapi, replaceURL } from "@/utils/getStrapi"
+import getBlogPageData from "@/utils/getBlogPageData"
 
 const ThankYouPage: NextPageWithLayout = ({ sections, meta, blog_posts }: any) => {
   const router = useRouter()
